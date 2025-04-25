@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+
+    <!-- seo -->
+    <title>Base site</title>
+    <meta name="description" content="">
+
+    <!-- css -->
+	<link href="/src/assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body x-data="{ openMenu : false }" x-cloak>
+
+    <div class="sitewrap">
+
+        <header role="banner" class="z-[9] block fixed top-0 w-full h-[60px] transition-all duration-300 lg:h-[100px] lg:px-[3.91vw] lg:transition-none" :class="openMenu ? 'bg-brown' : 'bg-ivory'">
+
+            <div class="wrap h-full">
+
+                <div class="flex items-center justify-between h-full px-5 lg:px-0">
+
+                    <h1 class="text-lg transition-all duration-300 lg:text-2xl lg:font-extralight" :class="openMenu ? 'text-ivory' : 'text-brown'"><a href="#">logo</a></h1>
+
+                    <button @click="openMenu = ! openMenu" type="button" class="block relative w-5 h-5 ml-auto cursor-pointer before:content-[''] before:block before:w-10 before:h-10 before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 transition-all duration-300 hover:rotate-45 lg:hidden" :class="{ 'rotate-45' : openMenu }">
+                        
+                        <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300" :class="openMenu ? 'bg-ivory' : 'bg-brown'"></span>
+    
+                        <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300 rotate-90" :class="openMenu ? 'bg-ivory' : 'bg-brown'"></span>
+    
+                    </button>
+
+                    <menu>
+
+                        <ul class="hidden items-center lg:flex">
+
+                            <li class="text-2xl font-extralight mr-[67px] last:mr-0"><a href="/src/assets/pages/contact.html" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">contact</a></li>
+
+                            <li class="text-2xl font-extralight mr-[67px] last:mr-0"><a href="#work" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">work</a></li>
+        
+                            <li class="text-2xl font-extralight mr-[67px] last:mr-0"><a href="#about" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">about</a></li>
+
+                        </ul>
+
+                    </menu>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <menu class="z-[8] block fixed top-0 left-0 w-full h-full bg-brown transition-all duration-300 lg:hidden" :class="openMenu ? 'opacity-100 visible pointer-events-all' : 'opacity-0 invisible pointer-events-none'">
+
+            <div class="wrap px-5 pt-[60px] pb-5 h-full flex">
+
+                <ul class="text-ivory max-h-fit self-end">
+                
+                    <li class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="/src/assets/pages/contact.html" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">get in touch</a></li>
+
+                    <li class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="#work" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">work</a></li>
+
+                    <li class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="#about" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">about</a></li>
+
+                </ul>
+
+            </div>
+
+        </menu>
+
+        <section class="form px-5 pt-[60px] h-[calc(100vh-96px)] lg:px-[3.91vw] lg:h-[calc(100vh-152px)] lg:pt-[100px]">
+
+            <div class="wrap h-full">
+
+                <form id="contact" action="?" method="POST" class="h-full flex flex-wrap content-center">
+
+                    <fieldset class="w-full max-h-fit mb-[18px] lg:mb-[30px] lg:max-w-[1024px] lg:mx-auto">
+
+                        <div class="input mb-[22px] last:mb-0 lg:mb-[27px]">
+
+                            <input type="text" id="firstname" name="firstname" placeholder="first name*" required class="block w-full text-brown text-lg border-b-[0.5px] border-solid border-brown pb-[5px] placeholder:text-brown lg:text-2xl lg:font-extralight lg:pb-[10px]">
+
+                        </div>
+
+                        <div class="input mb-[22px] last:mb-0 lg:mb-[27px]">
+
+                            <input type="text" id="surname" name="surname" placeholder="surname*" required class="block w-full text-brown text-lg border-b-[0.5px] border-solid border-brown pb-[5px] placeholder:text-brown lg:text-2xl lg:font-extralight lg:pb-[10px]">
+
+                        </div>
+
+                        <div class="input mb-[22px] last:mb-0 lg:mb-[27px]">
+
+                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" id="email" name="email" pattern=".+@example\.com" placeholder="email" class="block w-full text-brown text-lg border-b-[0.5px] border-solid border-brown pb-[5px] placeholder:text-brown lg:text-2xl lg:font-extralight lg:pb-[10px]">
+
+                        </div>
+
+                        <div class="input mb-[22px] last:mb-0 lg:mb-[27px]">
+
+                            <input type="tel" id="mobile" name="mobile" placeholder="mobile number*" required class="block w-full text-brown text-lg border-b-[0.5px] border-solid border-brown pb-[5px] placeholder:text-brown lg:text-2xl lg:font-extralight lg:pb-[10px]">
+
+                        </div>
+
+                        <div class="input mb-[22px] last:mb-0 lg:mb-[27px]">
+
+                            <textarea placeholder="message" id="message" name="message" class="resize-none block w-full text-brown text-lg border-b-[0.5px] border-solid border-brown pb-[5px] placeholder:text-brown lg:text-2xl lg:font-extralight lg:pb-[10px] lg:min-h-[120px]"></textarea>
+
+                        </div>
+
+                    </fieldset>
+
+                    <div class="w-full">
+
+                        <div class="lg:max-w-[1024px] lg:mx-auto">
+
+                            <button type="submit" class="cursor-pointer w-full max-w-fit ml-auto text-sm flex items-center lg:text-lg lg:font-extralight">Submit<figure class="ml-2 lg:ml-3"><img src="/src/assets/images/icons/arrow.svg" class="w-[25px] h-auto"></figure></button>
+    
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <footer class="px-5 pt-5 pb-2 lg:px-[3.91vw] lg:py-5">
+
+            <div class="wrap">
+
+                <ul class="mb-[10px] lg:mb-5">
+
+                    <li class="text-xs mb-[5px] last:mb-0 lg:text-base"><a href="#=tel:+44 (0)77 7777 7777" class="w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:-bottom-[2px] before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">+44 (0)77 7777 7777</a></li>
+
+                    <li class="text-xs mb-[5px] last:mb-0 lg:text-base"><a href="mailto:email@mail.com" class="w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:-bottom-[2px] before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">email@mail.com</a></li>
+
+                </ul>
+
+                <div class="copyright flex items-center justify-between pt-[5px] border-t-[0.5px] border-solid border-brown lg:pt-[15px]">
+
+                    <p class="text-xs lg:text-base">&copy; 2025 ltd</p>
+
+                </div>
+
+            </div>
+
+        </footer> 
+
+    </div>
+
+    <!-- scripts -->
+    <script type="module" src="/src/assets/js/site.js"></script>
+
+</body>
+</html>

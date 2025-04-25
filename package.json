@@ -1,0 +1,25 @@
+{
+  "name": "j-essica0.github.io",
+  "version": "1.0.0",
+  "description": "A blank site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-essica0/j-essica0.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-essica0/j-essica0.github.io/issues"
+  },
+  "homepage": "https://github.com/j-essica0/j-essica0.github.io#readme",
+  "dependencies": {
+    "@colinaut/alpinejs-plugin-simple-validate": "^1.8.2",
+    "@tailwindcss/vite": "^4.1.4",
+    "alpinejs": "^3.14.9",
+    "tailwindcss": "^4.1.4"
+  }
+}

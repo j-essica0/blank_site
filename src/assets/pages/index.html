@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+
+    <!-- seo -->
+    <title>Base site</title>
+    <meta name="description" content="">
+
+    <!-- css -->
+	<link href="/src/assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body x-data="{ openMenu : false }" x-cloak>
+
+    <div class="sitewrap">
+
+        <header role="banner" class="z-[9] block fixed top-0 w-full h-[60px] transition-all duration-300 lg:h-[100px] lg:px-[3.91vw] lg:transition-none" :class="openMenu ? 'bg-brown' : 'bg-ivory'">
+
+            <div class="wrap h-full">
+
+                <div class="flex items-center justify-between h-full px-5 lg:px-0">
+
+                    <h1 class="text-lg transition-all duration-300 lg:text-2xl lg:font-extralight" :class="openMenu ? 'text-ivory' : 'text-brown'"><a href="#">logo</a></h1>
+
+                    <button @click="openMenu = ! openMenu" type="button" class="block relative w-5 h-5 ml-auto cursor-pointer before:content-[''] before:block before:w-10 before:h-10 before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 transition-all duration-300 hover:rotate-45 lg:hidden" :class="{ 'rotate-45' : openMenu }">
+                        
+                        <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300" :class="openMenu ? 'bg-ivory' : 'bg-brown'"></span>
+    
+                        <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300 rotate-90" :class="openMenu ? 'bg-ivory' : 'bg-brown'"></span>
+    
+                    </button>
+
+                    <menu>
+
+                        <ul class="hidden items-center lg:flex">
+
+                            <li class="text-2xl font-extralight mr-[67px] last:mr-0"><a href="/src/assets/pages/contact.html" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">contact</a></li>
+
+                            <li class="text-2xl font-extralight mr-[67px] last:mr-0"><a href="#work" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">work</a></li>
+        
+                            <li class="text-2xl font-extralight mr-[67px] last:mr-0"><a href="#about" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">about</a></li>
+
+                        </ul>
+
+                    </menu>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <menu class="z-[8] block fixed top-0 left-0 w-full h-full bg-brown transition-all duration-300 lg:hidden" :class="openMenu ? 'opacity-100 visible pointer-events-all' : 'opacity-0 invisible pointer-events-none'">
+
+            <div class="wrap px-5 pt-[60px] pb-5 h-full flex">
+
+                <ul class="text-ivory max-h-fit self-end">
+                
+                    <li class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="/src/assets/pages/contact.html" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">get in touch</a></li>
+
+                    <li class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="#work" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">work</a></li>
+
+                    <li class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="#about" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">about</a></li>
+
+                </ul>
+
+            </div>
+
+        </menu>
+
+        <section class="hero px-5 h-screen pb-10 lg:px-[3.91vw] lg:pb-[50px]">
+
+            <div class="wrap h-full">
+
+                <div class="flex h-full">
+
+                    <div class="text-container max-h-fit self-end">
+
+                        <h2 class="font-extralight text-[2.375rem]/[0.98] mb-5 last:mb-0 lg:text-[9vh] lg:mb-[4.88vh] lg:font-thin">lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+
+                        <h2 class="font-extralight text-[2.375rem]/[0.98] mb-5 last:mb-0 lg:text-[9vh] lg:mb-[4.88vh] lg:font-thin">labore et dolore magna aliqua</h2>
+    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="work" class="showcase px-5 py-[65px] lg:px-[3.91vw] lg:py-[108px]">
+
+            <div class="wrap">
+
+                <div class="image-container max-w-[200px] ml-auto mb-[60px] lg:max-w-[768px] lg:mb-[95px]">
+
+                    <div class="image relative w-full h-0 pb-[56.25%] overflow-hidden">
+
+                        <img src="" alt="Description of an image" class="absolute top-0 left-0 w-full h-full object-cover">
+
+                    </div>
+
+                </div>
+
+                <div class="image-container max-w-[200px] mb-[70px] lg:max-w-[500px] lg:mb-[56px]">
+
+                    <div class="image relative w-full h-0 pb-[100%] overflow-hidden">
+
+                        <img src="" alt="Description of an image" class="absolute top-0 left-0 w-full h-full object-cover">
+
+                    </div>
+
+                </div>
+
+                <div class="image-container max-w-[150px] ml-auto mb-[50px] lg:max-w-[400px] lg:mb-[132px]">
+
+                    <div class="image relative w-full h-0 pb-[100%] overflow-hidden">
+
+                        <img src="" alt="Description of an image" class="absolute top-0 left-0 w-full h-full object-cover">
+
+                    </div>
+
+                </div>
+
+                <div class="image-container">
+
+                    <div class="image relative w-full h-0 pb-[56.25%] overflow-hidden">
+
+                        <img src="" alt="Description of an image" class="absolute top-0 left-0 w-full h-full object-cover">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about" class="text-block px-5 pb-[100px] lg:px-[3.91vw] lg:pb-[227px]">
+
+            <div class="wrap">
+
+                <h2 class="font-extralight text-2xl/[1.25] mb-[50px] last:mb-0 lg:font-thin lg:text-[4rem]/none">lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+
+                <h2 class="font-extralight text-2xl/[1.25] mb-[50px] last:mb-0 lg:font-thin lg:text-[4rem]/none">sed do eiusmod tempor incididunt</h2>
+
+                <h2 class="font-extralight text-2xl/[1.25] mb-[50px] last:mb-0 lg:font-thin lg:text-[4rem]/none">ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h2>
+
+                <h2 class="font-extralight text-2xl/[1.25] mb-[50px] last:mb-0 lg:font-thin lg:text-[4rem]/none">lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+
+            </div>
+
+        </section>
+
+        <footer class="px-5 pt-5 pb-2 lg:px-[3.91vw] lg:py-5">
+
+            <div class="wrap">
+
+                <ul class="mb-[10px] lg:mb-5">
+
+                    <li class="text-xs mb-[5px] last:mb-0 lg:text-base"><a href="#=tel:+44 (0)77 7777 7777" class="w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:-bottom-[2px] before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">+44 (0)77 7777 7777</a></li>
+
+                    <li class="text-xs mb-[5px] last:mb-0 lg:text-base"><a href="mailto:email@mail.com" class="w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:-bottom-[2px] before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">email@mail.com</a></li>
+
+                </ul>
+
+                <div class="copyright flex items-center justify-between pt-[5px] border-t-[0.5px] border-solid border-brown lg:pt-[15px]">
+
+                    <p class="text-xs lg:text-base">&copy; 2025 ltd</p>
+
+                </div>
+
+            </div>
+
+        </footer> 
+
+    </div>
+
+    <!-- scripts -->
+    <script type="module" src="/src/assets/js/site.js"></script>
+
+</body>
+</html>
