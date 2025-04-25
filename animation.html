@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+
+    <!-- seo -->
+    <title>Base site</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+	<link href="/src/assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+
+<body x-data="{ openMenu : false }" class="!bg-brown max-w-screen max-h-screen overflow-hidden" x-cloak>
+
+    <div class="sitewrap">
+
+        <header role="banner" class="z-[8] block fixed top-0 w-full h-[60px] lg:h-[100px] lg:px-[3.91vw]">
+
+            <div class="wrap h-full">
+
+                <div class="flex items-center justify-between h-full px-5 lg:px-0">
+
+                    <h1 class="text-lg transition-all duration-300 text-ivory lg:text-2xl lg:font-extralight"><a href="index.html">logo</a></h1>
+
+                    <button @click="openMenu = true" type="button" class="block relative w-5 h-5 ml-auto cursor-pointer before:content-[''] before:block before:w-10 before:h-10 before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 transition-all duration-300 hover:rotate-45 lg:hidden" :class="{ 'rotate-45' : openMenu }">
+                        
+                        <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300 bg-ivory"></span>
+     
+                        <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300 rotate-90 bg-ivory"></span>
+    
+                    </button>
+
+                    <menu>
+
+                        <ul class="hidden items-center lg:flex">
+
+                            <li class="text-2xl text-ivory font-extralight mr-[67px] last:mr-0"><a href="contact.html" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">contact</a></li>
+
+                            <li class="text-2xl text-ivory font-extralight mr-[67px] last:mr-0"><a href="#work" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">work</a></li>
+        
+                            <li class="text-2xl text-ivory font-extralight mr-[67px] last:mr-0"><a href="#about" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">about</a></li>
+
+                        </ul>
+
+                    </menu>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <menu class="z-[9] block fixed top-0 left-0 w-full h-full bg-brown transition-all duration-300 lg:hidden" :class="openMenu ? 'opacity-100 visible pointer-events-all' : 'opacity-0 invisible pointer-events-none'">
+
+            <div class="wrap px-5 pt-[60px] pb-5 h-full flex">
+
+                <div class="fixed top-0 left-0 w-full h-[60px]">
+
+                    <div class="flex items-center justify-between h-full px-5 lg:px-0">
+
+                        <h1 class="text-lg transition-all duration-300 text-ivory lg:text-2xl lg:font-extralight"><a href="index.html">logo</a></h1>
+    
+                        <button @click="openMenu = false" type="button" class="block relative w-5 h-5 ml-auto cursor-pointer before:content-[''] before:block before:w-10 before:h-10 before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 transition-all duration-300 hover:rotate-45 lg:hidden" :class="{ 'rotate-45' : openMenu }">
+                            
+                            <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300 bg-ivory"></span>
+         
+                            <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300 rotate-90 bg-ivory"></span>
+        
+                        </button>
+    
+                    </div>
+
+                </div>
+
+                <ul class="text-ivory max-h-fit self-end">
+                
+                    <li class="font-extralight text-ivory text-2xl mb-[10px] last:mb-0"><a href="contact.html" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">get in touch</a></li>
+
+                    <li @click="openMenu = false" class="font-extralight text-ivory text-2xl mb-[10px] last:mb-0"><a href="#work" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">work</a></li>
+
+                    <li @click="openMenu = false" class="font-extralight text-ivory text-2xl mb-[10px] last:mb-0"><a href="#about" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">about</a></li>
+
+                </ul>
+
+            </div>
+
+        </menu>
+
+        <section class="animation px-5 h-[calc(100svh-96px)] lg:px-[3.91vw] lg:h-[calc(100svh-152px)]" x-init="
+            let chain = $el.querySelector('.chain');
+            let currentY = 0;
+            window.addEventListener('mousedown', (e) => {
+                if ( e.target == chain ) {
+                    chain.ondragstart = function() { return false; };
+                    $el.style.cursor = 'grabbing';
+                    function dragChain() {
+                        currentY = e.clientY;
+                        console.log(currentY)
+                        chain.style.transform = 'translateY(' + 'px)';
+                    }
+                    window.addEventListener('mousemove', dragChain, false);
+                }
+                window.addEventListener('mouseup', () => {
+                    $el.style.cursor = 'grab';
+                    window.removeEventListener('mousemove', dragChain, false);
+                });
+            });
+        ">
+
+            <div class="wrap">
+
+                <div>
+
+                    <figure class="chain absolute -top-[105px] left-20 lg:-top-[101px] lg:left-[calc(50%-200px)] lg:-translate-x-1/2 h-full max-h-fit">
+
+                        <img draggable="false" src="/src/assets/images/icons/chain.svg" class="block w-auto pointer-events-none select-none h-[300px] lg:h-auto">
+    
+                    </figure>
+
+                </div>
+
+                <figure class="absolute -bottom-[25px] right-5 lg:-bottom-8 lg:right-[unset] lg:-translate-x-1/2 lg:left-[calc(50%+200px)]">
+
+                    <img src="/src/assets/images/icons/bulb.svg" class="block w-auto h-[350px] lg:h-auto">
+
+                </figure>
+
+            </div>
+
+        </section>
+
+        <footer class="px-5 pt-5 pb-2 lg:px-[3.91vw] lg:py-5">
+
+            <div class="wrap">
+
+                <ul class="mb-[10px] lg:mb-5">
+
+                    <li class="text-xs text-ivory mb-[5px] last:mb-0 lg:text-base"><a href="#=tel:+44 (0)77 7777 7777" class="w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:-bottom-[2px] before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">+44 (0)77 7777 7777</a></li>
+
+                    <li class="text-xs text-ivory mb-[5px] last:mb-0 lg:text-base"><a href="mailto:email@mail.com" class="w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:-bottom-[2px] before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">email@mail.com</a></li>
+
+                </ul>
+
+                <div class="copyright flex items-center justify-between pt-[5px] border-t-[0.5px] border-solid border-ivory lg:pt-[15px]">
+
+                    <p class="text-xs text-ivory lg:text-base">&copy; 2025 ltd</p>
+
+                </div>
+
+            </div>
+
+        </footer> 
+
+    </div>
+
+    <!-- scripts -->
+    <script type="module" src="/src/assets/js/site.js"></script>
+
+</body>
+</html>

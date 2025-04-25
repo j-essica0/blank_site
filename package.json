@@ -20,6 +20,7 @@
     "@colinaut/alpinejs-plugin-simple-validate": "^1.8.2",
     "@tailwindcss/vite": "^4.1.4",
     "alpinejs": "^3.14.9",
+    "motion": "^12.9.1",
     "tailwindcss": "^4.1.4"
   }
 }
