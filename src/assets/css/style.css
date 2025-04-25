@@ -278,6 +278,9 @@
   .max-h-fit {
     max-height: fit-content;
   }
+  .max-h-screen {
+    max-height: 100vh;
+  }
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
@@ -298,6 +301,9 @@
   }
   .max-w-fit {
     max-width: fit-content;
+  }
+  .max-w-screen {
+    max-width: 100vw;
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
@@ -351,6 +357,9 @@
   }
   .border-brown {
     border-color: var(--color-brown);
+  }
+  .\!bg-brown {
+    background-color: var(--color-brown) !important;
   }
   .bg-brown {
     background-color: var(--color-brown);

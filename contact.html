@@ -16,7 +16,7 @@
 
     <div class="sitewrap">
 
-        <header role="banner" class="z-[9] block fixed top-0 w-full h-[60px] transition-all duration-300 lg:h-[100px] lg:px-[3.91vw] lg:transition-none" :class="openMenu ? 'bg-brown' : 'bg-ivory'">
+        <header role="banner" class="z-[8] block fixed top-0 w-full h-[60px] lg:h-[100px] lg:px-[3.91vw]">
 
             <div class="wrap h-full">
 
@@ -24,10 +24,10 @@
 
                     <h1 class="text-lg transition-all duration-300 lg:text-2xl lg:font-extralight" :class="openMenu ? 'text-ivory' : 'text-brown'"><a href="index.html">logo</a></h1>
 
-                    <button @click="openMenu = ! openMenu" type="button" class="block relative w-5 h-5 ml-auto cursor-pointer before:content-[''] before:block before:w-10 before:h-10 before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 transition-all duration-300 hover:rotate-45 lg:hidden" :class="{ 'rotate-45' : openMenu }">
+                    <button @click="openMenu = true" type="button" class="block relative w-5 h-5 ml-auto cursor-pointer before:content-[''] before:block before:w-10 before:h-10 before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 transition-all duration-300 hover:rotate-45 lg:hidden" :class="{ 'rotate-45' : openMenu }">
                         
                         <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300" :class="openMenu ? 'bg-ivory' : 'bg-brown'"></span>
-    
+     
                         <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300 rotate-90" :class="openMenu ? 'bg-ivory' : 'bg-brown'"></span>
     
                     </button>
@@ -36,7 +36,7 @@
 
                         <ul class="hidden items-center lg:flex">
 
-                            <li class="text-2xl font-extralight mr-[67px] last:mr-0"><a href="/src/assets/pages/contact.html" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">contact</a></li>
+                            <li class="text-2xl font-extralight mr-[67px] last:mr-0"><a href="contact.html" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">contact</a></li>
 
                             <li class="text-2xl font-extralight mr-[67px] last:mr-0"><a href="#work" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-brown before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">work</a></li>
         
@@ -52,17 +52,35 @@
 
         </header>
 
-        <menu class="z-[8] block fixed top-0 left-0 w-full h-full bg-brown transition-all duration-300 lg:hidden" :class="openMenu ? 'opacity-100 visible pointer-events-all' : 'opacity-0 invisible pointer-events-none'">
+        <menu class="z-[9] block fixed top-0 left-0 w-full h-full bg-brown transition-all duration-300 lg:hidden" :class="openMenu ? 'opacity-100 visible pointer-events-all' : 'opacity-0 invisible pointer-events-none'">
 
             <div class="wrap px-5 pt-[60px] pb-5 h-full flex">
 
+                <div class="fixed top-0 left-0 w-full h-[60px]">
+
+                    <div class="flex items-center justify-between h-full px-5 lg:px-0">
+
+                        <h1 class="text-lg transition-all duration-300 lg:text-2xl lg:font-extralight" :class="openMenu ? 'text-ivory' : 'text-brown'"><a href="index.html">logo</a></h1>
+    
+                        <button @click="openMenu = false" type="button" class="block relative w-5 h-5 ml-auto cursor-pointer before:content-[''] before:block before:w-10 before:h-10 before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 transition-all duration-300 hover:rotate-45 lg:hidden" :class="{ 'rotate-45' : openMenu }">
+                            
+                            <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300" :class="openMenu ? 'bg-ivory' : 'bg-brown'"></span>
+         
+                            <span class="pointer-events-none block w-[0.5px] h-5 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 transition-all duration-300 rotate-90" :class="openMenu ? 'bg-ivory' : 'bg-brown'"></span>
+        
+                        </button>
+    
+                    </div>
+
+                </div>
+
                 <ul class="text-ivory max-h-fit self-end">
                 
-                    <li class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="/src/assets/pages/contact.html" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">get in touch</a></li>
+                    <li class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="contact.html" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">get in touch</a></li>
 
-                    <li class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="#work" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">work</a></li>
+                    <li @click="openMenu = false" class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="#work" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">work</a></li>
 
-                    <li class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="#about" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">about</a></li>
+                    <li @click="openMenu = false" class="font-extralight text-2xl mb-[10px] last:mb-0"><a href="#about" class="block w-full max-w-fit relative before:content-[''] before:block before:bg-ivory before:w-full before:h-[0.5px] before:absolute before:left-0 before:bottom-0 before:transition-all before:duration-500 before:max-w-0 hover:before:max-w-full">about</a></li>
 
                 </ul>
 
