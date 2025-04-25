@@ -28,6 +28,7 @@ body {
     font-weight: 300;
     padding: 0;
     margin: 0;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 [x-cloak] {

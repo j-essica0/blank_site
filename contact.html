@@ -5,6 +5,7 @@
     <!-- seo -->
     <title>Base site</title>
     <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- css -->
 	<link href="/src/assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
@@ -21,7 +22,7 @@
 
                 <div class="flex items-center justify-between h-full px-5 lg:px-0">
 
-                    <h1 class="text-lg transition-all duration-300 lg:text-2xl lg:font-extralight" :class="openMenu ? 'text-ivory' : 'text-brown'"><a href="#">logo</a></h1>
+                    <h1 class="text-lg transition-all duration-300 lg:text-2xl lg:font-extralight" :class="openMenu ? 'text-ivory' : 'text-brown'"><a href="index.html">logo</a></h1>
 
                     <button @click="openMenu = ! openMenu" type="button" class="block relative w-5 h-5 ml-auto cursor-pointer before:content-[''] before:block before:w-10 before:h-10 before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 transition-all duration-300 hover:rotate-45 lg:hidden" :class="{ 'rotate-45' : openMenu }">
                         
@@ -69,7 +70,7 @@
 
         </menu>
 
-        <section class="form px-5 pt-[60px] h-[calc(100vh-96px)] lg:px-[3.91vw] lg:h-[calc(100vh-152px)] lg:pt-[100px]">
+        <section class="form px-5 pt-[60px] h-[calc(100svh-96px)] lg:px-[3.91vw] lg:h-[calc(100svh-152px)] lg:pt-[100px]">
 
             <div class="wrap h-full">
 
