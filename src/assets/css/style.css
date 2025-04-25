@@ -263,17 +263,17 @@
   .h-\[60px\] {
     height: 60px;
   }
-  .h-\[calc\(100vh-96px\)\] {
-    height: calc(100vh - 96px);
+  .h-\[100svh\] {
+    height: 100svh;
+  }
+  .h-\[calc\(100svh-96px\)\] {
+    height: calc(100svh - 96px);
   }
   .h-auto {
     height: auto;
   }
   .h-full {
     height: 100%;
-  }
-  .h-screen {
-    height: 100vh;
   }
   .max-h-fit {
     max-height: fit-content;
@@ -658,9 +658,9 @@
       height: 100px;
     }
   }
-  .lg\:h-\[calc\(100vh-152px\)\] {
+  .lg\:h-\[calc\(100svh-152px\)\] {
     @media (width >= 64rem) {
-      height: calc(100vh - 152px);
+      height: calc(100svh - 152px);
     }
   }
   .lg\:min-h-\[120px\] {
@@ -794,6 +794,7 @@ body {
   font-weight: 300;
   padding: 0;
   margin: 0;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 [x-cloak] {
   display: none !important;
